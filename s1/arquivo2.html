@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <title>Formulário programacao web</title>
-    </head>
-    <body>
-        <H1>formulário programação web</H1>
-        <form>
-            <label for="nome">Nome:</label>
-            <imput type="text" id="nome" name="nome"><br>
-            <label for="email">E-mail:</label>
+<head>
+    <title>Formulário programação web</title>
+</head>
+<body>
+    <h1>Formulário sobre astronomia.</h1>
+
+    <h2>Preencha o formulário e selecione o interesse que deseja aprender mais sobre.</h2>
+
+<form action="/process-form" method="post">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Celular:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+    <label for="age">Idade:</label>
+    <input type="number" id="age" name="age" min="18" max="100" required>
+
+    <label for="gender">Gênero:</label>
+    <select id="gender" name="gender" required>
+        <option value="">Selecione</option>
+        <option value="male">Masculino</option>
+        <option value="female">Feminino</option>
+        <option value="other">Outro</option>
+    </select>
+
+    <ul>
+        <li>
+            <label for="interesses">Interesses:</label>
+
+            <input type="checkbox" id="interesse_planetas" name="interesses[]" value="planetas">
+                <label for="interesse_planetas">Planetas</label>
+
+            <input type="checkbox" id="interesse_estrelas" name="interesses[]" value="estrelas">
+                <label for="interesse_estrelas">Estrelas</label>
+                
+            <input type="checkbox" id="interesse_buracos_negros" name="interesses[]" value="buracos negros">
+                <label for="interesse_buracos_negros">Buracos Negros</label><br>
             
-        </form>
-    </body>
+            <input type="checkbox" id="interesse_asteroides" name="interesses[]" value="asteroides">
+                <label for="interesse_asteroides">Asteroides</label><br>
+           
+            
+        </li>
+    </ul>
+
+   
+    <label for="message">Mensagem:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Enviar Dados</button>
+</form>
+</body>
 </html>
