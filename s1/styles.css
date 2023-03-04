@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.div-Titulo-Da-Pagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Titulo-Da-Pagina {
+    width: 500px;
+}
+
+
+nav div {
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    display: flex;
+}
